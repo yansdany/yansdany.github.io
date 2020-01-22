@@ -1,0 +1,167 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000eff;
+    background: linear-gradient( #555DF4, transparent 1px), linear-gradient( 90deg, #555DF4, #000eff 1px);
+    background-size: 150px 150px;
+    background-position: center center;
+    cursor: url(images/cursor.svg), auto;
+}
+
+.vsyakie-blocki {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.kokoi-ty {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+}
+
+.znak {
+    animation: animaha-dlya-znaka 0.2s linear infinite alternate;
+}
+
+@keyframes animaha-dlya-znaka {
+    0%, 33% {
+        color: #ff4bc3;
+    }
+    33.1%, 66% {
+        color: #1af890;
+    }
+    66.1%, 100% {
+        color: #f8f41a;
+    }
+}
+
+@keyframes animaha-dlya-button {
+    0%, 33% {
+        background-color: #1af890;
+    }
+    33.1%, 66% {
+        background-color: #f8f41a;
+    }
+    66.1%, 100% {
+        background-color: #ff4bc3;
+    }
+}
+
+.uznac {
+    position: relative;
+    width: 280px;
+    height: 80px;
+    border: 10px solid #fff;
+    background-color: #ff4bc3;
+    color: #1af890;
+    font-size: 35px;
+    cursor:  url(images/cursor-pointer.svg), pointer;
+}
+
+.uznac::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    top: -20px;
+    left: -20px;
+}
+
+.uznac::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #000eff;
+    top: -10px;
+    left: -10px;
+}
+
+.uznac:hover {
+    animation: animaha-dlya-znaka 0.3s linear infinite alternate, animaha-dlya-button 0.3s linear infinite alternate;
+}
+
+.uznac::active {
+    transform: scale(1.5, 1.5);
+}
+
+.kot-image {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-image: url(images/kokoi.png);
+    background-size: cover;
+    border-radius: 50%;
+    border: 10px solid #fff;
+}
+
+.loader {
+    visibility: hidden;
+    position: absolute;
+    animation: kot-dumait 2s linear infinite;
+    top: 120px;
+    left: 90px;
+}
+
+@keyframes kot-dumait {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.nado-podumac {
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+}
+
+.normalny-site {
+    width: 40%;
+    font-size: 15px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+}
+
+.normalny-site a {
+    font-size: 25px;
+    color: #f8f41a;
+    text-decoration: underline wavy #ff4bc3;
+    cursor:  url(images/cursor-pointer.svg), pointer;
+}
+
+а {
+    cursor:  url(images/cursor-pointer.svg), pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .kokoi-ty {
+        font-size: 30px;
+
+    }
+    .normalny-site {
+        width: unset;
+        font-size: 10px;
+        line-height: 20px;
+    }
+
+    .normalny-site a {
+        font-size: 15px;
+    }
+}
