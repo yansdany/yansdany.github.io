@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
+    cursor: url(images/cursor.svg), auto;
 }
 
 body {
@@ -13,7 +14,6 @@ body {
     background: linear-gradient( #555DF4, transparent 1px), linear-gradient( 90deg, #555DF4, #000eff 1px);
     background-size: 150px 150px;
     background-position: center center;
-    cursor: url(images/cursor.svg), auto;
 }
 
 .vsyakie-blocki {
@@ -68,6 +68,10 @@ body {
     color: #1af890;
     font-size: 35px;
     cursor:  url(images/cursor-pointer.svg), pointer;
+}
+
+.uznac:focus {
+    outline: none;
 }
 
 .uznac::before {

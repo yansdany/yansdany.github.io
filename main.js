@@ -17,7 +17,7 @@ let koty = [
     {img: "url(images/16.png)", text: "ты кот с язычком ;)"},
 ];
 
-function changeCatImg() {
+function  izmenitKotaKartinky() {
     document.getElementById("loader").style.visibility = "visible";
     document.getElementById("kot-image").style.backgroundImage = "url('images/dumac.jpg')";
     document.getElementById("text").innerHTML = "подождите, мы думоим<span class='znak'>...</span>";
